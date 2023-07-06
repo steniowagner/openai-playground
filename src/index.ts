@@ -1,24 +1,27 @@
 import path from "path";
 
+import { splitPDFInDocuments } from "./utils/split-pdf-in-documents";
 import { readPdf } from "./utils/read-pdf";
-import { splitPdfIntoDocuments } from "./utils/split-pdf-into-documents";
+import { PineconeHandler } from "./utils/pinecone-handler";
 
 const PDF_FILE_PATH =
   "/Users/steniowagner/dev/openai-playground/test-files/test.pdf";
 
 const run = async () => {
   try {
-    const pdfName = path.basename(PDF_FILE_PATH);
     const pdfContent = await readPdf(PDF_FILE_PATH);
     if (!pdfContent) {
       throw new Error("Error when tried to read the pdf");
     }
-    const pdfContentSplittedIntoDocuments = await splitPdfIntoDocuments(
-      pdfContent.text,
-      pdfName
+    const pdfContentSplittedInDocuments = await splitPDFInDocuments(
+      path.basename(PDF_FILE_PATH),
+      pdfContent.text
     );
-    console.log(pdfContentSplittedIntoDocuments);
-  } catch (err) {}
+    const pineconHandler = new PineconeHandler();
+    await pineconHandler.storeDocuments(pdfContentSplittedInDocuments);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 (async () => {

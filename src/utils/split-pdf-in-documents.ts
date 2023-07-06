@@ -4,7 +4,7 @@ import { Document } from "langchain/document";
 const CHUNK_OVERLAP = 200;
 const CHUNK_SIZE = 1000;
 
-export const splitPdfIntoDocuments = async (
+export const splitPDFInDocuments = async (
   pdfContent: string,
   pdfFileName: string
 ) => {
