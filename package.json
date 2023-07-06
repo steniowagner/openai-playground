@@ -1,0 +1,8 @@
+{
+  "name": "openai-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/steniowagner/openai-playground.git",
+  "author": "Stenio Wagner <stenio.wagner1@gmail.com>",
+  "license": "MIT"
+}
