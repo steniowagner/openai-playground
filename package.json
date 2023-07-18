@@ -7,7 +7,8 @@
   "license": "MIT",
   "type": "commonjs",
   "scripts": {
-    "start": "npx nodemon"
+    "start": "ts-node ./src/run.ts",
+    "load:pinecone": "ts-node ./src/load-pdf-pinecone.ts"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
@@ -23,6 +24,7 @@
     "express": "^4.18.2",
     "js-yaml": "^4.1.0",
     "langchain": "^0.0.103",
+    "openai": "^3.3.0",
     "pdf-parse": "^1.1.1"
   }
 }

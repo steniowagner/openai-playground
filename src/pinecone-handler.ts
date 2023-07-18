@@ -31,3 +31,27 @@ export const storeDocuments = async (
     textKey: "text",
   });
 };
+
+export const getVectorStore = async () => {
+  const pineconeIndex = await getPineconeIndex();
+  const embeddings = new OpenAIEmbeddings({
+    openAIApiKey: process.env.OPENAI_API_KEY ?? "",
+    modelName: "text-embedding-ada-002",
+  });
+  return PineconeStore.fromExistingIndex(embeddings, {
+    namespace: process.env.PINECONE_NAMESPACE ?? "",
+    pineconeIndex,
+    textKey: "text",
+  });
+};
+
+export const findSimilarVectors = async (
+  vectorStore: PineconeStore,
+  prompt: string
+) => {
+  const similarities = await vectorStore.similaritySearch(prompt);
+  const context = similarities
+    .map((similarty) => similarty.pageContent)
+    .join(" ");
+  return context;
+};
