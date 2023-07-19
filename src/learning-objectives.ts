@@ -2,13 +2,26 @@ import { ChatCompletionResponseMessage } from "openai";
 
 import { GeneratorParams } from "./types";
 import { interpolatePrompt } from "./utils/interpolate-prompt";
-import * as pinecone from "./pinecone-handler";
-import * as prompts from "./prompts";
 import { askGpt } from "./ask-gpt";
 import { rephrase } from "./rephrase";
 
 type GenerateLearningObjectivesParms = GeneratorParams & {
   aim: string;
+};
+
+const LEARNING_OBEJCTIVES_PROMPT = `
+Question: [question]
+=========
+Context: [context]
+=========
+Your answer must be inside of an javascript array, where each learning objective will be an item of the array.
+Answer:`;
+
+const parseResultToArray = (result?: string) => {
+  if (!result) {
+    return [];
+  }
+  return JSON.parse(result) as string[];
 };
 
 export const generate = async (params: GenerateLearningObjectivesParms) => {
@@ -24,7 +37,7 @@ export const generate = async (params: GenerateLearningObjectivesParms) => {
     ...params,
     prompt: learningObjectivePrompt,
   });
-  const questionPrompt = interpolatePrompt(prompts.QA_PROMPT, {
+  const questionPrompt = interpolatePrompt(LEARNING_OBEJCTIVES_PROMPT, {
     question: learningObjectivePrompt,
     context: rephrasedPrompt,
   });
@@ -36,5 +49,5 @@ export const generate = async (params: GenerateLearningObjectivesParms) => {
     params.openAiApi,
     history
   )) as ChatCompletionResponseMessage;
-  return result.content as string;
+  return parseResultToArray(result.content);
 };

@@ -1,5 +1,4 @@
 import path from "path";
-import { PineconeStore } from "langchain/vectorstores/pinecone";
 import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from "openai";
 
 import { interpolatePrompt } from "./utils/interpolate-prompt";
@@ -37,7 +36,7 @@ export const run = async () => {
     openAiApi,
     guidelines,
   });
-  console.log(summary);
+  // console.log(summary);
   console.log("\n---------------- summary ----------------\n");
 
   console.log("\n---------------- aim ----------------");
@@ -47,7 +46,7 @@ export const run = async () => {
     guidelines,
     config,
   });
-  console.log(aimContent);
+  // console.log(aimContent);
   console.log("\n---------------- aim ----------------");
 
   console.log("\n---------------- learning objectives ----------------");
@@ -58,7 +57,6 @@ export const run = async () => {
     guidelines,
     config,
   });
-  console.log(learningObjectivesContent);
   console.log("\n---------------- learning objectives ----------------");
 
   console.log("\n---------------- statements ----------------");
@@ -70,19 +68,19 @@ export const run = async () => {
     guidelines,
     config,
   });
-  console.log(statementsContent);
+  console.log(statementsContent.length);
   console.log("\n---------------- statements ----------------");
 
-  console.log("\n---------------- feedback ----------------");
-  // const feedbackContent = await feedback.generate({
-  //   targets: statementsContent,
-  //   aim: aimContent,
-  //   vectorStore,
-  //   openAiApi,
-  //   guidelines,
-  //   config,
-  // });
-  console.log("\n---------------- feedback ----------------");
+  // console.log("\n---------------- feedback ----------------");
+  const feedbackContent = await feedback.generate({
+    statements: statementsContent,
+    aim: aimContent,
+    vectorStore,
+    openAiApi,
+    guidelines,
+    config,
+  });
+  // console.log("\n---------------- feedback ----------------");
 
   return;
 };

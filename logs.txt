@@ -1,0 +1,2186 @@
+yarn run v1.22.19
+$ ts-node ./src/run.ts
+Prompt inicial:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  }
+]
+
+
+--------------------- Summary ---------------------
+
+Prompt:  {
+  role: 'user',
+  content: '\n' +
+    'Question: Summarize this document\n' +
+    '=========\n' +
+    'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+    'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+    '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+    '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+    '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+    '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+    'invite.\n' +
+    'Learning the foundations\n' +
+    'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+    'and security in general.\n' +
+    'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+    'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+    'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+    'AWS Security Maturity RoadmapSummit Route\n' +
+    'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+    'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+    'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+    'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+    'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+    'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+    'back into it?\n' +
+    'Stage 4: Detection\n' +
+    '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+    '\x03Perform regular scanning of the accounts for security issues.\n' +
+    '\x03Document your security guidelines for your company.\n' +
+    'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+    'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+    '31\n' +
+    'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+    '32\n' +
+    'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+    '33\n' +
+    'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+    'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+    'AWS Security Maturity RoadmapSummit Route\n' +
+    'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+    'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+    'learned to improve.\n' +
+    'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+    'enforcing a role session name on role assumptions.\n' +
+    'Conclusion\n' +
+    'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+    'scott@summitroute.com or read more at summitroute.com\n' +
+    'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+    '=========\n' +
+    'Answer:'
+}
+{ prompt_tokens: 727, completion_tokens: 128, total_tokens: 855 }
+
+Histórico:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Summarize this document\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+      'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+      'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+      'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+      'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+      'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+      'back into it?\n' +
+      'Stage 4: Detection\n' +
+      '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+      '\x03Perform regular scanning of the accounts for security issues.\n' +
+      '\x03Document your security guidelines for your company.\n' +
+      'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+      'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+      '31\n' +
+      'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+      '32\n' +
+      'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+      '33\n' +
+      'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+      'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: `This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.`
+  }
+]
+
+Resposta:  This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.
+
+--------------------- Aim ---------------------
+
+Prompt:  {
+  role: 'user',
+  content: '\n' +
+    'Question: We need to create content to be used for education of a "DevSecOps engineer" in the "IT" industry.\n' +
+    'Generate a sentence starting with an infinitive verb which captures why someone would study this content, with no more than 20 words.\n' +
+    '\n' +
+    '=========\n' +
+    'Context: DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+    'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+    'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+    'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+    '11\n' +
+    'certification. To\n' +
+    '1\n' +
+    'https://summitroute.com\n' +
+    '2\n' +
+    'http://flaws.cloud\n' +
+    '3\n' +
+    'http://flaws2.cloud\n' +
+    '4\n' +
+    'https://github.com/duo-labs/cloudmapper\n' +
+    '5\n' +
+    'https://github.com/duo-labs/cloudtracker\n' +
+    '6\n' +
+    'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+    '7\n' +
+    'https://github.com/duo-labs/parliament\n' +
+    '8\n' +
+    'https://lastweekinaws.com/\n' +
+    '9\n' +
+    'https://cloudseclist.com/\n' +
+    '10\n' +
+    'https://tldrsec.com/\n' +
+    '11\n' +
+    'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+    'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+    '\x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+    'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+    '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+    '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+    '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+    '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+    'invite.\n' +
+    'Learning the foundations\n' +
+    'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+    'and security in general.\n' +
+    'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+    'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+    'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+    'problem, we’ll aim for later. For now, the main thing you want to do is find roles with admin (or near admin)\n' +
+    'privileges.\n' +
+    'You should implement a solution to detect secrets being committed to source-code repos to avoid having\n' +
+    'IAM User access keys added to public, or even private, repos. One solution is Yelp’s detect-secrets\n' +
+    '28\n' +
+    'project.\n' +
+    'Stage 6: Reduce attack surface and mitigate compromises\n' +
+    '\x03Apply SCPs.\n' +
+    '\x03Have no publicly facing EC2s or S3 buckets.\n' +
+    '\x03Enforce IMDSv2 on all EC2s.\n' +
+    'SCPs (Service Control Policies) can be used to restrict regions, deny root user access, and protect your\n' +
+    'defenses, such as protecting your IAM role for Security auditing from being deleted. See examples in my post\n' +
+    'AWS SCP Best Practices\n' +
+    '29\n' +
+    '.\n' +
+    'Resources such as EC2s and S3 buckets should not be publicly accessible, but instead should have an ELB or\n' +
+    'CloudFront in front them. This has a number of benefits including being able to make use of AWS Shield\n' +
+    'you’ll want to add new rules that accounts might already have violated at some point in the past. For these\n' +
+    'reasons, you’ll want something to perform regular scanning of your environments.\n' +
+    'Now that you’re detecting various issues, you’ll want to document what those issues are so you’re not just\n' +
+    'telling your team they did something wrong without them knowing the rules you want them to play by. Many\n' +
+    'of the vendor and open-source solutions in this space detect things that you will not care about. For example,\n' +
+    'you might have accepted the risk of things like a bastion host that allows SSH access globally (although at\n' +
+    'some point you should try to switch that to use Systems Manager Session Manager). There are also things\n' +
+    'that out of the box these tools don’t detect that are specific to your environment that you want done. For\n' +
+    'example, you might want all public network resources to only be in a few specific accounts and subnets, or\n' +
+    '=========\n' +
+    'Answer:'
+}
+{ prompt_tokens: 1953, completion_tokens: 20, total_tokens: 1973 }
+
+Histórico:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Summarize this document\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+      'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+      'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+      'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+      'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+      'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+      'back into it?\n' +
+      'Stage 4: Detection\n' +
+      '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+      '\x03Perform regular scanning of the accounts for security issues.\n' +
+      '\x03Document your security guidelines for your company.\n' +
+      'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+      'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+      '31\n' +
+      'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+      '32\n' +
+      'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+      '33\n' +
+      'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+      'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: `This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.`
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: We need to create content to be used for education of a "DevSecOps engineer" in the "IT" industry.\n' +
+      'Generate a sentence starting with an infinitive verb which captures why someone would study this content, with no more than 20 words.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '\x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'problem, we’ll aim for later. For now, the main thing you want to do is find roles with admin (or near admin)\n' +
+      'privileges.\n' +
+      'You should implement a solution to detect secrets being committed to source-code repos to avoid having\n' +
+      'IAM User access keys added to public, or even private, repos. One solution is Yelp’s detect-secrets\n' +
+      '28\n' +
+      'project.\n' +
+      'Stage 6: Reduce attack surface and mitigate compromises\n' +
+      '\x03Apply SCPs.\n' +
+      '\x03Have no publicly facing EC2s or S3 buckets.\n' +
+      '\x03Enforce IMDSv2 on all EC2s.\n' +
+      'SCPs (Service Control Policies) can be used to restrict regions, deny root user access, and protect your\n' +
+      'defenses, such as protecting your IAM role for Security auditing from being deleted. See examples in my post\n' +
+      'AWS SCP Best Practices\n' +
+      '29\n' +
+      '.\n' +
+      'Resources such as EC2s and S3 buckets should not be publicly accessible, but instead should have an ELB or\n' +
+      'CloudFront in front them. This has a number of benefits including being able to make use of AWS Shield\n' +
+      'you’ll want to add new rules that accounts might already have violated at some point in the past. For these\n' +
+      'reasons, you’ll want something to perform regular scanning of your environments.\n' +
+      'Now that you’re detecting various issues, you’ll want to document what those issues are so you’re not just\n' +
+      'telling your team they did something wrong without them knowing the rules you want them to play by. Many\n' +
+      'of the vendor and open-source solutions in this space detect things that you will not care about. For example,\n' +
+      'you might have accepted the risk of things like a bastion host that allows SSH access globally (although at\n' +
+      'some point you should try to switch that to use Systems Manager Session Manager). There are also things\n' +
+      'that out of the box these tools don’t detect that are specific to your environment that you want done. For\n' +
+      'example, you might want all public network resources to only be in a few specific accounts and subnets, or\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: 'To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.'
+  }
+]
+
+Resposta:  To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.
+
+--------------------- Learning Objectives ---------------------
+
+{ prompt_tokens: 2964, completion_tokens: 109, total_tokens: 3073 }
+
+
+--------------------- Statements ---------------------
+
+{ prompt_tokens: 3352, completion_tokens: 101, total_tokens: 3453 }
+
+{ prompt_tokens: 3356, completion_tokens: 91, total_tokens: 3447 }
+
+{ prompt_tokens: 3347, completion_tokens: 114, total_tokens: 3461 }
+
+{ prompt_tokens: 3348, completion_tokens: 97, total_tokens: 3445 }
+
+{ prompt_tokens: 3349, completion_tokens: 73, total_tokens: 3422 }
+
+{ prompt_tokens: 3349, completion_tokens: 115, total_tokens: 3464 }
+
+
+--------------------- Feedback ---------------------
+
+{ prompt_tokens: 3490, completion_tokens: 239, total_tokens: 3729 }
+
+{ prompt_tokens: 3480, completion_tokens: 311, total_tokens: 3791 }
+
+{ prompt_tokens: 3462, completion_tokens: 331, total_tokens: 3793 }
+
+{ prompt_tokens: 3503, completion_tokens: 371, total_tokens: 3874 }
+
+{ prompt_tokens: 3486, completion_tokens: 368, total_tokens: 3854 }
+
+{ prompt_tokens: 3504, completion_tokens: 465, total_tokens: 3969 }
+
+Learning objective:
+ - Identify common security incidents in AWS environments and develop defensive strategies to mitigate them.
+
+Statement:
+  [T] Publicly accessible S3 buckets are a common security incident in AWS environments.
+[F] Compromised IAM roles cannot result in access to the metadata service at 169.254.169.254.
+[T] Implementing access controls and encryption can help mitigate the risk of leaked access keys.
+[F] The most common AWS-related incident is unauthorized access to EC2 instances through the metadata service.
+[T] Regularly monitoring and analyzing logs can help identify security incidents in AWS environments.
+
+Histórico:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Summarize this document\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+      'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+      'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+      'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+      'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+      'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+      'back into it?\n' +
+      'Stage 4: Detection\n' +
+      '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+      '\x03Perform regular scanning of the accounts for security issues.\n' +
+      '\x03Document your security guidelines for your company.\n' +
+      'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+      'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+      '31\n' +
+      'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+      '32\n' +
+      'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+      '33\n' +
+      'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+      'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: `This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.`
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: We need to create content to be used for education of a "DevSecOps engineer" in the "IT" industry.\n' +
+      'Generate a sentence starting with an infinitive verb which captures why someone would study this content, with no more than 20 words.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '\x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'problem, we’ll aim for later. For now, the main thing you want to do is find roles with admin (or near admin)\n' +
+      'privileges.\n' +
+      'You should implement a solution to detect secrets being committed to source-code repos to avoid having\n' +
+      'IAM User access keys added to public, or even private, repos. One solution is Yelp’s detect-secrets\n' +
+      '28\n' +
+      'project.\n' +
+      'Stage 6: Reduce attack surface and mitigate compromises\n' +
+      '\x03Apply SCPs.\n' +
+      '\x03Have no publicly facing EC2s or S3 buckets.\n' +
+      '\x03Enforce IMDSv2 on all EC2s.\n' +
+      'SCPs (Service Control Policies) can be used to restrict regions, deny root user access, and protect your\n' +
+      'defenses, such as protecting your IAM role for Security auditing from being deleted. See examples in my post\n' +
+      'AWS SCP Best Practices\n' +
+      '29\n' +
+      '.\n' +
+      'Resources such as EC2s and S3 buckets should not be publicly accessible, but instead should have an ELB or\n' +
+      'CloudFront in front them. This has a number of benefits including being able to make use of AWS Shield\n' +
+      'you’ll want to add new rules that accounts might already have violated at some point in the past. For these\n' +
+      'reasons, you’ll want something to perform regular scanning of your environments.\n' +
+      'Now that you’re detecting various issues, you’ll want to document what those issues are so you’re not just\n' +
+      'telling your team they did something wrong without them knowing the rules you want them to play by. Many\n' +
+      'of the vendor and open-source solutions in this space detect things that you will not care about. For example,\n' +
+      'you might have accepted the risk of things like a bastion host that allows SSH access globally (although at\n' +
+      'some point you should try to switch that to use Systems Manager Session Manager). There are also things\n' +
+      'that out of the box these tools don’t detect that are specific to your environment that you want done. For\n' +
+      'example, you might want all public network resources to only be in a few specific accounts and subnets, or\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: 'To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Considering that our aim is "To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.", generate 6 learning objectives (in a bullet list, one per line) for this training material.\n' +
+      'A learning objective need to describe a specific outcome and make clear what a "DevSecOps engineer" in the industry "IT" needs to know and/or do to achieve that outcome, in no more than 20 words, and it should start with a present tense verb.\n' +
+      'Examples of well written learning objectives are:\n' +
+      '  - Understand best practices for securing AWS environments and gain foundational knowledge of AWS security.\n' +
+      '  - Implement a common, secure baseline for new AWS accounts by following documented processes.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'prepare for the exam, you can take the acloud.guru\n' +
+      '12\n' +
+      'course and read the various white-papers from AWS\n' +
+      'along with the FAQs for security related AWS services. For companies, I also offer AWS security training.\n' +
+      'Mine is not geared toward the certification, but will help. There are other AWS offered certs which you may\n' +
+      'also wish to get in order to learn the foundations of AWS.\n' +
+      'Most common security incidents\n' +
+      'In order to discuss the steps to secure AWS environments, you should be aware of what the common security\n' +
+      'incidents on AWS are so you can plan your defensive strategies accordingly. Generically, the most common\n' +
+      'AWS related incidents are:\n' +
+      '1. Publicly accessible resources such as S3 buckets or ElasticSearch clusters.\n' +
+      '2. Leaked access keys. For example, access keys posted to GitHub.\n' +
+      '3.Compromised IAM Roles through SSRF or RCE against an EC2, resulting in access to the metadata\n' +
+      'service at 169.254.169.254.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: '- Identify common security incidents in AWS environments and develop defensive strategies to mitigate them.\n' +
+      '- Implement a secure baseline for new AWS accounts by following documented processes and best practices.\n' +
+      '- Demonstrate the ability to detect and respond to security incidents in a timely manner.\n' +
+      '- Enforce role session name on role assumptions to improve incident analysis capabilities.\n' +
+      '- Understand the foundations of AWS and security concepts relevant to DevSecOps engineering in the IT industry.\n' +
+      '- Apply Service Control Policies (SCPs) to restrict access, protect defenses, and reduce attack surface in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each learning objective listed, we want to generate from 2 to 4 statements.\n' +
+      "Those statements will be either true or false, and will be used to test the user's knowledge.\n" +
+      'To create a well-written statement, consider what a "DevSecOps engineer" in the industry "IT" need to think, say, do or know to be effective.\n' +
+      'To create the false statements, consider:\n' +
+      '  - what cognitive errors might a "DevSecOps engineer" in the industry "IT" make and why, or\n' +
+      '  - what might cause "DevSecOps engineer" to be resistant to avoiding this statement and why, or\n' +
+      '  - what may be hard to understand for a "DevSecOps engineer" and why.\n' +
+      'Each statement generated must:\n' +
+      '  - be relevant to the objective;\n' +
+      '  - be realistic;\n' +
+      '  - be derived from the ingested content;\n' +
+      '  - be distinct from each other (or not similar to each other);\n' +
+      '  - be no more than 25 words;\n' +
+      '  - describe an action and start with a present tense verb.\n' +
+      'Present the statements listed and grouped by the learning objective, and a [T] or [F] prepended to each, noting if they are true or false.\n'
+  },
+  {
+    role: 'assistant',
+    content: '[T] Publicly accessible S3 buckets are a common security incident in AWS environments.\n' +
+      '[F] Compromised IAM roles cannot result in access to the metadata service at 169.254.169.254.\n' +
+      '[T] Implementing access controls and encryption can help mitigate the risk of leaked access keys.\n' +
+      '[F] The most common AWS-related incident is unauthorized access to EC2 instances through the metadata service.\n' +
+      '[T] Regularly monitoring and analyzing logs can help identify security incidents in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each statement, generate a sentence explaining either why this is correct (for true statements) or a sentence explaining why it is incorrect, and what confusion a "DevSecOps engineer" in the industry "IT" might make if they think the statement is correct.\n'
+  },
+]
+
+Resposta:  {
+  role: 'assistant',
+  content: '[T] Publicly accessible S3 buckets are a common security incident in AWS environments.\n' +
+    'Explanation: This statement is correct because misconfigured S3 buckets that are publicly accessible can lead to unauthorized access and data breaches. A DevSecOps engineer should ensure that proper access controls and permissions are in place to prevent this incident.\n' +
+    '\n' +
+    '[F] Compromised IAM roles cannot result in access to the metadata service at 169.254.169.254.\n' +
+    'Explanation: This statement is incorrect. Compromised IAM roles can be used to gain access to the metadata service at 169.254.169.254, which can provide sensitive information about the EC2 instance. A DevSecOps engineer should be aware of this risk and implement measures to protect against it.\n' +
+    '\n' +
+    '[T] Implementing access controls and encryption can help mitigate the risk of leaked access keys.\n' +
+    'Explanation: This statement is correct. By implementing access controls and encryption, the risk of leaked access keys can be reduced. Access controls limit who can access the keys, while encryption ensures that even if the keys are compromised, they cannot be easily used.\n' +
+    '\n' +
+    '[F] The most common AWS-related incident is unauthorized access to EC2 instances through the metadata service.\n' +
+    'Explanation: This statement is incorrect. While unauthorized access to EC2 instances through the metadata service is a potential incident, it is not the most common one. Other incidents, such as publicly accessible resources and leaked access keys, are more prevalent. A DevSecOps engineer should be aware of the various types of incidents and prioritize their mitigation accordingly.\n' +
+    '\n' +
+    '[T] Regularly monitoring and analyzing logs can help identify security incidents in AWS environments.\n' +
+    'Explanation: This statement is correct. By regularly monitoring and analyzing logs, DevSecOps engineers can detect and identify security incidents in AWS environments. Logs provide valuable information about system activities and can help identify any suspicious or malicious behavior.'
+}
+---------------------
+
+Learning objective:
+ - Implement a secure baseline for new AWS accounts by following documented processes and best practices.
+
+Statement:
+  [T] Following documented processes and best practices is essential for implementing a secure baseline for new AWS accounts.
+[F] Implementing a secure baseline for new AWS accounts does not require following documented processes and best practices.
+[T] Best practices should be considered when implementing a secure baseline for new AWS accounts.
+[F] Implementing a secure baseline for new AWS accounts does not involve following any processes or best practices.
+[T] Documented processes provide guidance for implementing a secure baseline for new AWS accounts.
+[F] Implementing a secure baseline for new AWS accounts does not require any documentation or processes.
+
+Histórico:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Summarize this document\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+      'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+      'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+      'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+      'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+      'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+      'back into it?\n' +
+      'Stage 4: Detection\n' +
+      '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+      '\x03Perform regular scanning of the accounts for security issues.\n' +
+      '\x03Document your security guidelines for your company.\n' +
+      'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+      'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+      '31\n' +
+      'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+      '32\n' +
+      'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+      '33\n' +
+      'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+      'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: `This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.`
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: We need to create content to be used for education of a "DevSecOps engineer" in the "IT" industry.\n' +
+      'Generate a sentence starting with an infinitive verb which captures why someone would study this content, with no more than 20 words.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '\x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'problem, we’ll aim for later. For now, the main thing you want to do is find roles with admin (or near admin)\n' +
+      'privileges.\n' +
+      'You should implement a solution to detect secrets being committed to source-code repos to avoid having\n' +
+      'IAM User access keys added to public, or even private, repos. One solution is Yelp’s detect-secrets\n' +
+      '28\n' +
+      'project.\n' +
+      'Stage 6: Reduce attack surface and mitigate compromises\n' +
+      '\x03Apply SCPs.\n' +
+      '\x03Have no publicly facing EC2s or S3 buckets.\n' +
+      '\x03Enforce IMDSv2 on all EC2s.\n' +
+      'SCPs (Service Control Policies) can be used to restrict regions, deny root user access, and protect your\n' +
+      'defenses, such as protecting your IAM role for Security auditing from being deleted. See examples in my post\n' +
+      'AWS SCP Best Practices\n' +
+      '29\n' +
+      '.\n' +
+      'Resources such as EC2s and S3 buckets should not be publicly accessible, but instead should have an ELB or\n' +
+      'CloudFront in front them. This has a number of benefits including being able to make use of AWS Shield\n' +
+      'you’ll want to add new rules that accounts might already have violated at some point in the past. For these\n' +
+      'reasons, you’ll want something to perform regular scanning of your environments.\n' +
+      'Now that you’re detecting various issues, you’ll want to document what those issues are so you’re not just\n' +
+      'telling your team they did something wrong without them knowing the rules you want them to play by. Many\n' +
+      'of the vendor and open-source solutions in this space detect things that you will not care about. For example,\n' +
+      'you might have accepted the risk of things like a bastion host that allows SSH access globally (although at\n' +
+      'some point you should try to switch that to use Systems Manager Session Manager). There are also things\n' +
+      'that out of the box these tools don’t detect that are specific to your environment that you want done. For\n' +
+      'example, you might want all public network resources to only be in a few specific accounts and subnets, or\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: 'To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Considering that our aim is "To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.", generate 6 learning objectives (in a bullet list, one per line) for this training material.\n' +
+      'A learning objective need to describe a specific outcome and make clear what a "DevSecOps engineer" in the industry "IT" needs to know and/or do to achieve that outcome, in no more than 20 words, and it should start with a present tense verb.\n' +
+      'Examples of well written learning objectives are:\n' +
+      '  - Understand best practices for securing AWS environments and gain foundational knowledge of AWS security.\n' +
+      '  - Implement a common, secure baseline for new AWS accounts by following documented processes.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'prepare for the exam, you can take the acloud.guru\n' +
+      '12\n' +
+      'course and read the various white-papers from AWS\n' +
+      'along with the FAQs for security related AWS services. For companies, I also offer AWS security training.\n' +
+      'Mine is not geared toward the certification, but will help. There are other AWS offered certs which you may\n' +
+      'also wish to get in order to learn the foundations of AWS.\n' +
+      'Most common security incidents\n' +
+      'In order to discuss the steps to secure AWS environments, you should be aware of what the common security\n' +
+      'incidents on AWS are so you can plan your defensive strategies accordingly. Generically, the most common\n' +
+      'AWS related incidents are:\n' +
+      '1. Publicly accessible resources such as S3 buckets or ElasticSearch clusters.\n' +
+      '2. Leaked access keys. For example, access keys posted to GitHub.\n' +
+      '3.Compromised IAM Roles through SSRF or RCE against an EC2, resulting in access to the metadata\n' +
+      'service at 169.254.169.254.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: '- Identify common security incidents in AWS environments and develop defensive strategies to mitigate them.\n' +
+      '- Implement a secure baseline for new AWS accounts by following documented processes and best practices.\n' +
+      '- Demonstrate the ability to detect and respond to security incidents in a timely manner.\n' +
+      '- Enforce role session name on role assumptions to improve incident analysis capabilities.\n' +
+      '- Understand the foundations of AWS and security concepts relevant to DevSecOps engineering in the IT industry.\n' +
+      '- Apply Service Control Policies (SCPs) to restrict access, protect defenses, and reduce attack surface in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each learning objective listed, we want to generate from 2 to 4 statements.\n' +
+      "Those statements will be either true or false, and will be used to test the user's knowledge.\n" +
+      'To create a well-written statement, consider what a "DevSecOps engineer" in the industry "IT" need to think, say, do or know to be effective.\n' +
+      'To create the false statements, consider:\n' +
+      '  - what cognitive errors might a "DevSecOps engineer" in the industry "IT" make and why, or\n' +
+      '  - what might cause "DevSecOps engineer" to be resistant to avoiding this statement and why, or\n' +
+      '  - what may be hard to understand for a "DevSecOps engineer" and why.\n' +
+      'Each statement generated must:\n' +
+      '  - be relevant to the objective;\n' +
+      '  - be realistic;\n' +
+      '  - be derived from the ingested content;\n' +
+      '  - be distinct from each other (or not similar to each other);\n' +
+      '  - be no more than 25 words;\n' +
+      '  - describe an action and start with a present tense verb.\n' +
+      'Present the statements listed and grouped by the learning objective, and a [T] or [F] prepended to each, noting if they are true or false.\n'
+  },
+  {
+    role: 'assistant',
+    content: '[T] Following documented processes and best practices is essential for implementing a secure baseline for new AWS accounts.\n' +
+      '[F] Implementing a secure baseline for new AWS accounts does not require following documented processes and best practices.\n' +
+      '[T] Best practices should be considered when implementing a secure baseline for new AWS accounts.\n' +
+      '[F] Implementing a secure baseline for new AWS accounts does not involve following any processes or best practices.\n' +
+      '[T] Documented processes provide guidance for implementing a secure baseline for new AWS accounts.\n' +
+      '[F] Implementing a secure baseline for new AWS accounts does not require any documentation or processes.'
+  },
+  {
+    role: 'user',
+    content: 'For each statement, generate a sentence explaining either why this is correct (for true statements) or a sentence explaining why it is incorrect, and what confusion a "DevSecOps engineer" in the industry "IT" might make if they think the statement is correct.\n'
+  },
+]
+
+Resposta:  {
+  role: 'assistant',
+  content: '[T] Following documented processes and best practices is essential for implementing a secure baseline for new AWS accounts.\n' +
+    'Explanation: This statement is correct because documented processes and best practices provide guidance and ensure consistency in implementing a secure baseline for new AWS accounts. By following these processes, a DevSecOps engineer can establish a strong foundation for security.\n' +
+    '\n' +
+    '[F] Implementing a secure baseline for new AWS accounts does not require following documented processes and best practices.\n' +
+    'Explanation: This statement is incorrect. Implementing a secure baseline for new AWS accounts requires following documented processes and best practices. Without adhering to these guidelines, there is a risk of overlooking important security measures, leading to potential vulnerabilities in the accounts. A DevSecOps engineer should always follow established processes and best practices to ensure the security of AWS accounts.\n' +
+    '\n' +
+    '[T] Best practices should be considered when implementing a secure baseline for new AWS accounts.\n' +
+    'Explanation: This statement is correct. Best practices are developed based on industry standards and experiences, and they provide valuable insights into effective security measures. Considering best practices ensures that a DevSecOps engineer incorporates proven methods and strategies into the implementation of a secure baseline for new AWS accounts.\n' +
+    '\n' +
+    '[F] Implementing a secure baseline for new AWS accounts does not involve following any processes or best practices.\n' +
+    'Explanation: This statement is incorrect. Implementing a secure baseline for new AWS accounts involves following established processes and best practices. Neglecting to follow these guidelines can result in inadequate security measures and potential vulnerabilities. It is crucial for a DevSecOps engineer to adhere to processes and best practices to ensure the security of AWS accounts.\n' +
+    '\n' +
+    '[T] Documented processes provide guidance for implementing a secure baseline for new AWS accounts.\n' +
+    'Explanation: This statement is correct. Documented processes serve as a reference and provide step-by-step guidance for implementing a secure baseline for new AWS accounts. They help ensure consistency and accuracy in the implementation process, enabling a DevSecOps engineer to establish a robust security foundation.\n' +
+    '\n' +
+    '[F] Implementing a secure baseline for new AWS accounts does not require any documentation or processes.\n' +
+    'Explanation: This statement is incorrect. Implementing a secure baseline for new AWS accounts requires documentation and processes. Without proper documentation and defined processes, it becomes challenging to maintain consistency and ensure the effectiveness of security measures. A DevSecOps engineer should rely on documented processes to implement a secure baseline for AWS accounts.'
+}
+---------------------
+
+Learning objective:
+ - Demonstrate the ability to detect and respond to security incidents in a timely manner.
+
+Statement:
+  [T] Promptly analyzing and investigating security alerts is crucial for effective incident response.
+[T] Implementing automated monitoring tools can help in detecting security incidents in real-time.
+[F] It is acceptable to delay the response to security incidents as long as they are eventually addressed.
+[F] Incident response is not a necessary skill for a DevSecOps engineer in the IT industry.
+
+Histórico:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Summarize this document\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+      'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+      'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+      'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+      'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+      'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+      'back into it?\n' +
+      'Stage 4: Detection\n' +
+      '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+      '\x03Perform regular scanning of the accounts for security issues.\n' +
+      '\x03Document your security guidelines for your company.\n' +
+      'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+      'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+      '31\n' +
+      'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+      '32\n' +
+      'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+      '33\n' +
+      'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+      'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: `This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.`
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: We need to create content to be used for education of a "DevSecOps engineer" in the "IT" industry.\n' +
+      'Generate a sentence starting with an infinitive verb which captures why someone would study this content, with no more than 20 words.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '\x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'problem, we’ll aim for later. For now, the main thing you want to do is find roles with admin (or near admin)\n' +
+      'privileges.\n' +
+      'You should implement a solution to detect secrets being committed to source-code repos to avoid having\n' +
+      'IAM User access keys added to public, or even private, repos. One solution is Yelp’s detect-secrets\n' +
+      '28\n' +
+      'project.\n' +
+      'Stage 6: Reduce attack surface and mitigate compromises\n' +
+      '\x03Apply SCPs.\n' +
+      '\x03Have no publicly facing EC2s or S3 buckets.\n' +
+      '\x03Enforce IMDSv2 on all EC2s.\n' +
+      'SCPs (Service Control Policies) can be used to restrict regions, deny root user access, and protect your\n' +
+      'defenses, such as protecting your IAM role for Security auditing from being deleted. See examples in my post\n' +
+      'AWS SCP Best Practices\n' +
+      '29\n' +
+      '.\n' +
+      'Resources such as EC2s and S3 buckets should not be publicly accessible, but instead should have an ELB or\n' +
+      'CloudFront in front them. This has a number of benefits including being able to make use of AWS Shield\n' +
+      'you’ll want to add new rules that accounts might already have violated at some point in the past. For these\n' +
+      'reasons, you’ll want something to perform regular scanning of your environments.\n' +
+      'Now that you’re detecting various issues, you’ll want to document what those issues are so you’re not just\n' +
+      'telling your team they did something wrong without them knowing the rules you want them to play by. Many\n' +
+      'of the vendor and open-source solutions in this space detect things that you will not care about. For example,\n' +
+      'you might have accepted the risk of things like a bastion host that allows SSH access globally (although at\n' +
+      'some point you should try to switch that to use Systems Manager Session Manager). There are also things\n' +
+      'that out of the box these tools don’t detect that are specific to your environment that you want done. For\n' +
+      'example, you might want all public network resources to only be in a few specific accounts and subnets, or\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: 'To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Considering that our aim is "To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.", generate 6 learning objectives (in a bullet list, one per line) for this training material.\n' +
+      'A learning objective need to describe a specific outcome and make clear what a "DevSecOps engineer" in the industry "IT" needs to know and/or do to achieve that outcome, in no more than 20 words, and it should start with a present tense verb.\n' +
+      'Examples of well written learning objectives are:\n' +
+      '  - Understand best practices for securing AWS environments and gain foundational knowledge of AWS security.\n' +
+      '  - Implement a common, secure baseline for new AWS accounts by following documented processes.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'prepare for the exam, you can take the acloud.guru\n' +
+      '12\n' +
+      'course and read the various white-papers from AWS\n' +
+      'along with the FAQs for security related AWS services. For companies, I also offer AWS security training.\n' +
+      'Mine is not geared toward the certification, but will help. There are other AWS offered certs which you may\n' +
+      'also wish to get in order to learn the foundations of AWS.\n' +
+      'Most common security incidents\n' +
+      'In order to discuss the steps to secure AWS environments, you should be aware of what the common security\n' +
+      'incidents on AWS are so you can plan your defensive strategies accordingly. Generically, the most common\n' +
+      'AWS related incidents are:\n' +
+      '1. Publicly accessible resources such as S3 buckets or ElasticSearch clusters.\n' +
+      '2. Leaked access keys. For example, access keys posted to GitHub.\n' +
+      '3.Compromised IAM Roles through SSRF or RCE against an EC2, resulting in access to the metadata\n' +
+      'service at 169.254.169.254.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: '- Identify common security incidents in AWS environments and develop defensive strategies to mitigate them.\n' +
+      '- Implement a secure baseline for new AWS accounts by following documented processes and best practices.\n' +
+      '- Demonstrate the ability to detect and respond to security incidents in a timely manner.\n' +
+      '- Enforce role session name on role assumptions to improve incident analysis capabilities.\n' +
+      '- Understand the foundations of AWS and security concepts relevant to DevSecOps engineering in the IT industry.\n' +
+      '- Apply Service Control Policies (SCPs) to restrict access, protect defenses, and reduce attack surface in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each learning objective listed, we want to generate from 2 to 4 statements.\n' +
+      "Those statements will be either true or false, and will be used to test the user's knowledge.\n" +
+      'To create a well-written statement, consider what a "DevSecOps engineer" in the industry "IT" need to think, say, do or know to be effective.\n' +
+      'To create the false statements, consider:\n' +
+      '  - what cognitive errors might a "DevSecOps engineer" in the industry "IT" make and why, or\n' +
+      '  - what might cause "DevSecOps engineer" to be resistant to avoiding this statement and why, or\n' +
+      '  - what may be hard to understand for a "DevSecOps engineer" and why.\n' +
+      'Each statement generated must:\n' +
+      '  - be relevant to the objective;\n' +
+      '  - be realistic;\n' +
+      '  - be derived from the ingested content;\n' +
+      '  - be distinct from each other (or not similar to each other);\n' +
+      '  - be no more than 25 words;\n' +
+      '  - describe an action and start with a present tense verb.\n' +
+      'Present the statements listed and grouped by the learning objective, and a [T] or [F] prepended to each, noting if they are true or false.\n'
+  },
+  {
+    role: 'assistant',
+    content: '[T] Promptly analyzing and investigating security alerts is crucial for effective incident response.\n' +
+      '[T] Implementing automated monitoring tools can help in detecting security incidents in real-time.\n' +
+      '[F] It is acceptable to delay the response to security incidents as long as they are eventually addressed.\n' +
+      '[F] Incident response is not a necessary skill for a DevSecOps engineer in the IT industry.'
+  },
+  {
+    role: 'user',
+    content: 'For each statement, generate a sentence explaining either why this is correct (for true statements) or a sentence explaining why it is incorrect, and what confusion a "DevSecOps engineer" in the industry "IT" might make if they think the statement is correct.\n'
+  },
+]
+
+Resposta:  {
+  role: 'assistant',
+  content: '[T] Promptly analyzing and investigating security alerts is crucial for effective incident response.\n' +
+    'Explanation: This statement is correct because timely analysis and investigation of security alerts allow for quick identification and mitigation of potential threats. It helps in minimizing the impact of security incidents and preventing further damage to the system. A DevSecOps engineer needs to prioritize prompt incident response to ensure the security of the IT infrastructure.\n' +
+    '\n' +
+    '[T] Implementing automated monitoring tools can help in detecting security incidents in real-time.\n' +
+    'Explanation: This statement is correct because automated monitoring tools continuously monitor the system for any suspicious activities or anomalies. They can detect security incidents in real-time, enabling immediate response and mitigation. By implementing such tools, a DevSecOps engineer can enhance the security posture of the IT infrastructure.\n' +
+    '\n' +
+    '[F] It is acceptable to delay the response to security incidents as long as they are eventually addressed.\n' +
+    'Explanation: This statement is incorrect. Delaying the response to security incidents can have severe consequences, as it allows attackers more time to exploit vulnerabilities and cause damage. A DevSecOps engineer should prioritize timely incident response to minimize the impact and prevent further compromise of the IT systems. Delaying the response can lead to increased risks and potential data breaches.\n' +
+    '\n' +
+    '[F] Incident response is not a necessary skill for a DevSecOps engineer in the IT industry.\n' +
+    'Explanation: This statement is incorrect. Incident response is a crucial skill for a DevSecOps engineer in the IT industry. They need to be proficient in identifying, analyzing, and responding to security incidents effectively. Without incident response skills, a DevSecOps engineer may struggle to mitigate security threats, leaving the IT infrastructure vulnerable to attacks and compromising the overall security posture.'
+}
+---------------------
+
+Learning objective:
+ - Enforce role session name on role assumptions to improve incident analysis capabilities.
+
+Statement:
+  [T] Enforcing a role session name on role assumptions helps in identifying and tracking activities performed by different roles.
+[F] Enforcing a role session name on role assumptions is not necessary for incident analysis and does not provide any benefits.
+[T] Role session names can be used to differentiate and attribute actions performed by different roles in the system.
+[F] Enforcing a role session name on role assumptions can only be done manually and cannot be automated.
+[T] By enforcing a role session name on role assumptions, it becomes easier to identify the source of any suspicious or unauthorized activities.
+
+Histórico:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Summarize this document\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+      'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+      'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+      'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+      'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+      'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+      'back into it?\n' +
+      'Stage 4: Detection\n' +
+      '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+      '\x03Perform regular scanning of the accounts for security issues.\n' +
+      '\x03Document your security guidelines for your company.\n' +
+      'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+      'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+      '31\n' +
+      'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+      '32\n' +
+      'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+      '33\n' +
+      'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+      'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: `This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.`
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: We need to create content to be used for education of a "DevSecOps engineer" in the "IT" industry.\n' +
+      'Generate a sentence starting with an infinitive verb which captures why someone would study this content, with no more than 20 words.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '\x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'problem, we’ll aim for later. For now, the main thing you want to do is find roles with admin (or near admin)\n' +
+      'privileges.\n' +
+      'You should implement a solution to detect secrets being committed to source-code repos to avoid having\n' +
+      'IAM User access keys added to public, or even private, repos. One solution is Yelp’s detect-secrets\n' +
+      '28\n' +
+      'project.\n' +
+      'Stage 6: Reduce attack surface and mitigate compromises\n' +
+      '\x03Apply SCPs.\n' +
+      '\x03Have no publicly facing EC2s or S3 buckets.\n' +
+      '\x03Enforce IMDSv2 on all EC2s.\n' +
+      'SCPs (Service Control Policies) can be used to restrict regions, deny root user access, and protect your\n' +
+      'defenses, such as protecting your IAM role for Security auditing from being deleted. See examples in my post\n' +
+      'AWS SCP Best Practices\n' +
+      '29\n' +
+      '.\n' +
+      'Resources such as EC2s and S3 buckets should not be publicly accessible, but instead should have an ELB or\n' +
+      'CloudFront in front them. This has a number of benefits including being able to make use of AWS Shield\n' +
+      'you’ll want to add new rules that accounts might already have violated at some point in the past. For these\n' +
+      'reasons, you’ll want something to perform regular scanning of your environments.\n' +
+      'Now that you’re detecting various issues, you’ll want to document what those issues are so you’re not just\n' +
+      'telling your team they did something wrong without them knowing the rules you want them to play by. Many\n' +
+      'of the vendor and open-source solutions in this space detect things that you will not care about. For example,\n' +
+      'you might have accepted the risk of things like a bastion host that allows SSH access globally (although at\n' +
+      'some point you should try to switch that to use Systems Manager Session Manager). There are also things\n' +
+      'that out of the box these tools don’t detect that are specific to your environment that you want done. For\n' +
+      'example, you might want all public network resources to only be in a few specific accounts and subnets, or\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: 'To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Considering that our aim is "To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.", generate 6 learning objectives (in a bullet list, one per line) for this training material.\n' +
+      'A learning objective need to describe a specific outcome and make clear what a "DevSecOps engineer" in the industry "IT" needs to know and/or do to achieve that outcome, in no more than 20 words, and it should start with a present tense verb.\n' +
+      'Examples of well written learning objectives are:\n' +
+      '  - Understand best practices for securing AWS environments and gain foundational knowledge of AWS security.\n' +
+      '  - Implement a common, secure baseline for new AWS accounts by following documented processes.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'prepare for the exam, you can take the acloud.guru\n' +
+      '12\n' +
+      'course and read the various white-papers from AWS\n' +
+      'along with the FAQs for security related AWS services. For companies, I also offer AWS security training.\n' +
+      'Mine is not geared toward the certification, but will help. There are other AWS offered certs which you may\n' +
+      'also wish to get in order to learn the foundations of AWS.\n' +
+      'Most common security incidents\n' +
+      'In order to discuss the steps to secure AWS environments, you should be aware of what the common security\n' +
+      'incidents on AWS are so you can plan your defensive strategies accordingly. Generically, the most common\n' +
+      'AWS related incidents are:\n' +
+      '1. Publicly accessible resources such as S3 buckets or ElasticSearch clusters.\n' +
+      '2. Leaked access keys. For example, access keys posted to GitHub.\n' +
+      '3.Compromised IAM Roles through SSRF or RCE against an EC2, resulting in access to the metadata\n' +
+      'service at 169.254.169.254.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: '- Identify common security incidents in AWS environments and develop defensive strategies to mitigate them.\n' +
+      '- Implement a secure baseline for new AWS accounts by following documented processes and best practices.\n' +
+      '- Demonstrate the ability to detect and respond to security incidents in a timely manner.\n' +
+      '- Enforce role session name on role assumptions to improve incident analysis capabilities.\n' +
+      '- Understand the foundations of AWS and security concepts relevant to DevSecOps engineering in the IT industry.\n' +
+      '- Apply Service Control Policies (SCPs) to restrict access, protect defenses, and reduce attack surface in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each learning objective listed, we want to generate from 2 to 4 statements.\n' +
+      "Those statements will be either true or false, and will be used to test the user's knowledge.\n" +
+      'To create a well-written statement, consider what a "DevSecOps engineer" in the industry "IT" need to think, say, do or know to be effective.\n' +
+      'To create the false statements, consider:\n' +
+      '  - what cognitive errors might a "DevSecOps engineer" in the industry "IT" make and why, or\n' +
+      '  - what might cause "DevSecOps engineer" to be resistant to avoiding this statement and why, or\n' +
+      '  - what may be hard to understand for a "DevSecOps engineer" and why.\n' +
+      'Each statement generated must:\n' +
+      '  - be relevant to the objective;\n' +
+      '  - be realistic;\n' +
+      '  - be derived from the ingested content;\n' +
+      '  - be distinct from each other (or not similar to each other);\n' +
+      '  - be no more than 25 words;\n' +
+      '  - describe an action and start with a present tense verb.\n' +
+      'Present the statements listed and grouped by the learning objective, and a [T] or [F] prepended to each, noting if they are true or false.\n'
+  },
+  {
+    role: 'assistant',
+    content: '[T] Enforcing a role session name on role assumptions helps in identifying and tracking activities performed by different roles.\n' +
+      '[F] Enforcing a role session name on role assumptions is not necessary for incident analysis and does not provide any benefits.\n' +
+      '[T] Role session names can be used to differentiate and attribute actions performed by different roles in the system.\n' +
+      '[F] Enforcing a role session name on role assumptions can only be done manually and cannot be automated.\n' +
+      '[T] By enforcing a role session name on role assumptions, it becomes easier to identify the source of any suspicious or unauthorized activities.'
+  },
+  {
+    role: 'user',
+    content: 'For each statement, generate a sentence explaining either why this is correct (for true statements) or a sentence explaining why it is incorrect, and what confusion a "DevSecOps engineer" in the industry "IT" might make if they think the statement is correct.\n'
+  },
+  '[T] Enforcing a role session name on role assumptions helps in identifying and tracking activities performed by different roles.\n' +
+    '[F] Enforcing a role session name on role assumptions is not necessary for incident analysis and does not provide any benefits.\n' +
+    '[T] Role session names can be used to differentiate and attribute actions performed by different roles in the system.\n' +
+    '[F] Enforcing a role session name on role assumptions can only be done manually and cannot be automated.\n' +
+    '[T] By enforcing a role session name on role assumptions, it becomes easier to identify the source of any suspicious or unauthorized activities.',
+  {
+    role: 'user',
+    content: 'For each statement, generate a sentence explaining either why this is correct (for true statements) or a sentence explaining why it is incorrect, and what confusion a "DevSecOps engineer" in the industry "IT" might make if they think the statement is correct.\n'
+  }
+]
+
+Resposta:  {
+  role: 'assistant',
+  content: '[T] Enforcing a role session name on role assumptions helps in identifying and tracking activities performed by different roles.\n' +
+    'Explanation: This statement is correct because by enforcing a role session name on role assumptions, it becomes easier to identify and track the activities performed by different roles in the system. This helps in maintaining accountability and understanding the actions taken by each role.\n' +
+    '\n' +
+    '[F] Enforcing a role session name on role assumptions is not necessary for incident analysis and does not provide any benefits.\n' +
+    'Explanation: This statement is incorrect. Enforcing a role session name on role assumptions is crucial for incident analysis as it helps in identifying the source of any suspicious or unauthorized activities. Without proper role session names, it would be challenging to attribute actions to specific roles, hindering the incident analysis process.\n' +
+    '\n' +
+    '[T] Role session names can be used to differentiate and attribute actions performed by different roles in the system.\n' +
+    'Explanation: This statement is correct. Role session names provide a way to differentiate and attribute actions to specific roles in the system. This helps in understanding the responsibilities and actions of each role, aiding in effective management and analysis of the system.\n' +
+    '\n' +
+    '[F] Enforcing a role session name on role assumptions can only be done manually and cannot be automated.\n' +
+    'Explanation: This statement is incorrect. Enforcing a role session name on role assumptions can be automated through the use of appropriate tools and configurations. Automation helps in ensuring consistency and reduces the chances of human error in assigning role session names.\n' +
+    '\n' +
+    '[T] By enforcing a role session name on role assumptions, it becomes easier to identify the source of any suspicious or unauthorized activities.\n' +
+    'Explanation: This statement is correct. Enforcing a role session name on role assumptions helps in identifying the source of any suspicious or unauthorized activities by providing a clear indication of which role was involved in the activity. This aids in incident response and investigation, allowing for timely action to be taken.'
+}
+---------------------
+
+Learning objective:
+ - Understand the foundations of AWS and security concepts relevant to DevSecOps engineering in the IT industry.
+
+Statement:
+  [T] Understanding the shared responsibility model is crucial for a DevSecOps engineer to grasp the division of security responsibilities between AWS and the customer.
+[T] Familiarity with AWS Identity and Access Management (IAM) is essential for a DevSecOps engineer to manage user access and permissions effectively.
+[F] DevSecOps engineers do not need to understand the basics of networking and network security in AWS environments.
+[F] DevSecOps engineers are not responsible for ensuring compliance with industry regulations and standards in AWS environments.
+
+Histórico:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Summarize this document\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+      'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+      'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+      'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+      'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+      'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+      'back into it?\n' +
+      'Stage 4: Detection\n' +
+      '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+      '\x03Perform regular scanning of the accounts for security issues.\n' +
+      '\x03Document your security guidelines for your company.\n' +
+      'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+      'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+      '31\n' +
+      'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+      '32\n' +
+      'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+      '33\n' +
+      'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+      'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: `This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.`
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: We need to create content to be used for education of a "DevSecOps engineer" in the "IT" industry.\n' +
+      'Generate a sentence starting with an infinitive verb which captures why someone would study this content, with no more than 20 words.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '\x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'problem, we’ll aim for later. For now, the main thing you want to do is find roles with admin (or near admin)\n' +
+      'privileges.\n' +
+      'You should implement a solution to detect secrets being committed to source-code repos to avoid having\n' +
+      'IAM User access keys added to public, or even private, repos. One solution is Yelp’s detect-secrets\n' +
+      '28\n' +
+      'project.\n' +
+      'Stage 6: Reduce attack surface and mitigate compromises\n' +
+      '\x03Apply SCPs.\n' +
+      '\x03Have no publicly facing EC2s or S3 buckets.\n' +
+      '\x03Enforce IMDSv2 on all EC2s.\n' +
+      'SCPs (Service Control Policies) can be used to restrict regions, deny root user access, and protect your\n' +
+      'defenses, such as protecting your IAM role for Security auditing from being deleted. See examples in my post\n' +
+      'AWS SCP Best Practices\n' +
+      '29\n' +
+      '.\n' +
+      'Resources such as EC2s and S3 buckets should not be publicly accessible, but instead should have an ELB or\n' +
+      'CloudFront in front them. This has a number of benefits including being able to make use of AWS Shield\n' +
+      'you’ll want to add new rules that accounts might already have violated at some point in the past. For these\n' +
+      'reasons, you’ll want something to perform regular scanning of your environments.\n' +
+      'Now that you’re detecting various issues, you’ll want to document what those issues are so you’re not just\n' +
+      'telling your team they did something wrong without them knowing the rules you want them to play by. Many\n' +
+      'of the vendor and open-source solutions in this space detect things that you will not care about. For example,\n' +
+      'you might have accepted the risk of things like a bastion host that allows SSH access globally (although at\n' +
+      'some point you should try to switch that to use Systems Manager Session Manager). There are also things\n' +
+      'that out of the box these tools don’t detect that are specific to your environment that you want done. For\n' +
+      'example, you might want all public network resources to only be in a few specific accounts and subnets, or\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: 'To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Considering that our aim is "To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.", generate 6 learning objectives (in a bullet list, one per line) for this training material.\n' +
+      'A learning objective need to describe a specific outcome and make clear what a "DevSecOps engineer" in the industry "IT" needs to know and/or do to achieve that outcome, in no more than 20 words, and it should start with a present tense verb.\n' +
+      'Examples of well written learning objectives are:\n' +
+      '  - Understand best practices for securing AWS environments and gain foundational knowledge of AWS security.\n' +
+      '  - Implement a common, secure baseline for new AWS accounts by following documented processes.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'prepare for the exam, you can take the acloud.guru\n' +
+      '12\n' +
+      'course and read the various white-papers from AWS\n' +
+      'along with the FAQs for security related AWS services. For companies, I also offer AWS security training.\n' +
+      'Mine is not geared toward the certification, but will help. There are other AWS offered certs which you may\n' +
+      'also wish to get in order to learn the foundations of AWS.\n' +
+      'Most common security incidents\n' +
+      'In order to discuss the steps to secure AWS environments, you should be aware of what the common security\n' +
+      'incidents on AWS are so you can plan your defensive strategies accordingly. Generically, the most common\n' +
+      'AWS related incidents are:\n' +
+      '1. Publicly accessible resources such as S3 buckets or ElasticSearch clusters.\n' +
+      '2. Leaked access keys. For example, access keys posted to GitHub.\n' +
+      '3.Compromised IAM Roles through SSRF or RCE against an EC2, resulting in access to the metadata\n' +
+      'service at 169.254.169.254.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: '- Identify common security incidents in AWS environments and develop defensive strategies to mitigate them.\n' +
+      '- Implement a secure baseline for new AWS accounts by following documented processes and best practices.\n' +
+      '- Demonstrate the ability to detect and respond to security incidents in a timely manner.\n' +
+      '- Enforce role session name on role assumptions to improve incident analysis capabilities.\n' +
+      '- Understand the foundations of AWS and security concepts relevant to DevSecOps engineering in the IT industry.\n' +
+      '- Apply Service Control Policies (SCPs) to restrict access, protect defenses, and reduce attack surface in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each learning objective listed, we want to generate from 2 to 4 statements.\n' +
+      "Those statements will be either true or false, and will be used to test the user's knowledge.\n" +
+      'To create a well-written statement, consider what a "DevSecOps engineer" in the industry "IT" need to think, say, do or know to be effective.\n' +
+      'To create the false statements, consider:\n' +
+      '  - what cognitive errors might a "DevSecOps engineer" in the industry "IT" make and why, or\n' +
+      '  - what might cause "DevSecOps engineer" to be resistant to avoiding this statement and why, or\n' +
+      '  - what may be hard to understand for a "DevSecOps engineer" and why.\n' +
+      'Each statement generated must:\n' +
+      '  - be relevant to the objective;\n' +
+      '  - be realistic;\n' +
+      '  - be derived from the ingested content;\n' +
+      '  - be distinct from each other (or not similar to each other);\n' +
+      '  - be no more than 25 words;\n' +
+      '  - describe an action and start with a present tense verb.\n' +
+      'Present the statements listed and grouped by the learning objective, and a [T] or [F] prepended to each, noting if they are true or false.\n'
+  },
+  {
+    role: 'assistant',
+    content: '[T] Understanding the shared responsibility model is crucial for a DevSecOps engineer to grasp the division of security responsibilities between AWS and the customer.\n' +
+      '[T] Familiarity with AWS Identity and Access Management (IAM) is essential for a DevSecOps engineer to manage user access and permissions effectively.\n' +
+      '[F] DevSecOps engineers do not need to understand the basics of networking and network security in AWS environments.\n' +
+      '[F] DevSecOps engineers are not responsible for ensuring compliance with industry regulations and standards in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each statement, generate a sentence explaining either why this is correct (for true statements) or a sentence explaining why it is incorrect, and what confusion a "DevSecOps engineer" in the industry "IT" might make if they think the statement is correct.\n'
+  },
+]
+
+Resposta:  {
+  role: 'assistant',
+  content: '[T] Understanding the shared responsibility model is crucial for a DevSecOps engineer to grasp the division of security responsibilities between AWS and the customer. This is correct because it helps the engineer understand which security measures are managed by AWS and which are their responsibility, ensuring a comprehensive security approach.\n' +
+    '[T] Familiarity with AWS Identity and Access Management (IAM) is essential for a DevSecOps engineer to manage user access and permissions effectively. This is correct because IAM allows the engineer to control and manage access to AWS resources, ensuring proper authentication and authorization.\n' +
+    '[F] DevSecOps engineers do not need to understand the basics of networking and network security in AWS environments. This is incorrect. Understanding networking and network security in AWS environments is crucial for a DevSecOps engineer to design and implement secure network architectures and protect against potential threats.\n' +
+    '[F] DevSecOps engineers are not responsible for ensuring compliance with industry regulations and standards in AWS environments. This is incorrect. DevSecOps engineers play a vital role in ensuring compliance with industry regulations and standards in AWS environments, as they are responsible for implementing and maintaining security controls to meet these requirements. Thinking otherwise may lead to non-compliance and potential legal and security risks.'
+}
+---------------------
+
+Learning objective:
+ - Apply Service Control Policies (SCPs) to restrict access, protect defenses, and reduce attack surface in AWS environments.
+
+Statement:
+  [T] Service Control Policies (SCPs) are used to restrict access and reduce attack surface in AWS environments.
+[T] SCPs can be used to protect defenses, such as preventing the deletion of the IAM role for Security auditing.
+[F] SCPs are only applicable to S3 buckets and do not have any impact on access to other AWS services.
+[F] SCPs are only used for monitoring purposes and do not provide any security controls in AWS environments.
+
+Histórico:  [
+  {
+    role: 'system',
+    content: 'As a highly advanced AI language model, your task is to provide a comprehensive and accurate response, based on the context provided below. The following excerpt from a document is given, along with a task related to it. Please ensure that your answer is well-structured and directly addresses the task.\n' +
+      'Guidelines:\n' +
+      '  - Use information from the provided context to support your response. Do not include information from external sources;\n' +
+      '  - All content must be produced and understandable for someone with an IQ of 100;\n' +
+      '  - All content produced must be in Australian/UK English;\n' +
+      '  - All content produced should use second person singular pronouns (you, your, you’re, yourself etc…), unless specified otherwise.\n'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Summarize this document\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'As you granted access to the accounts for the Security account, you should use this as an initialization\n' +
+      'script for future accounts so that you have a common, secure baseline, that new accounts you create, or old\n' +
+      'accounts that are newly acquired, can conform to. You should document a process for creating new accounts.\n' +
+      'What team should do that and for what needs? Where should the root password and MFA (Multi-Factor\n' +
+      'Authentication) be kept? What email address pattern should be used for the account? Who should be on the\n' +
+      'distribution list of that email address? What phone number and billing information do these accounts tie\n' +
+      'back into it?\n' +
+      'Stage 4: Detection\n' +
+      '\x03Detect issues from logs and events and enable investigations to logs.\n' +
+      '\x03Perform regular scanning of the accounts for security issues.\n' +
+      '\x03Document your security guidelines for your company.\n' +
+      'With CloudTrail logs going to an S3 bucket in the Security account, and GuardDuty and Access Analyzer\n' +
+      'monitor, and then aggregating these events. Note that CloudWatch Events do not record List, Describe,\n' +
+      '31\n' +
+      'https://summitroute.com/blog/2018/09/24/investigating_malicious_amis/\n' +
+      '32\n' +
+      'https://aws.amazon.com/blogs/aws/new-use-tag-policies-to-manage-tags-across-multiple-aws-accounts/\n' +
+      '33\n' +
+      'https://summitroute.com/blog/2018/06/22/guidance_on_deploying_honey_tokens/\n' +
+      'Page 8 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: `This document provides recommendations and resources for learning about AWS security. It suggests following various Twitter accounts and joining the "Cloud Security Forum" on Slack. The document also recommends a book called "Securing DevOps: Security in the Cloud" for learning security concepts related to AWS. It discusses the importance of creating a common, secure baseline for new AWS accounts and outlines questions to consider when creating new accounts. The document also emphasizes the need for detection and regular scanning of accounts for security issues. It suggests practicing incident response and improving incident analysis capabilities. The document concludes by mentioning the author's role as an independent AWS security consultant and providing contact information.`
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: We need to create content to be used for education of a "DevSecOps engineer" in the "IT" industry.\n' +
+      'Generate a sentence starting with an infinitive verb which captures why someone would study this content, with no more than 20 words.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '\x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'problem, we’ll aim for later. For now, the main thing you want to do is find roles with admin (or near admin)\n' +
+      'privileges.\n' +
+      'You should implement a solution to detect secrets being committed to source-code repos to avoid having\n' +
+      'IAM User access keys added to public, or even private, repos. One solution is Yelp’s detect-secrets\n' +
+      '28\n' +
+      'project.\n' +
+      'Stage 6: Reduce attack surface and mitigate compromises\n' +
+      '\x03Apply SCPs.\n' +
+      '\x03Have no publicly facing EC2s or S3 buckets.\n' +
+      '\x03Enforce IMDSv2 on all EC2s.\n' +
+      'SCPs (Service Control Policies) can be used to restrict regions, deny root user access, and protect your\n' +
+      'defenses, such as protecting your IAM role for Security auditing from being deleted. See examples in my post\n' +
+      'AWS SCP Best Practices\n' +
+      '29\n' +
+      '.\n' +
+      'Resources such as EC2s and S3 buckets should not be publicly accessible, but instead should have an ELB or\n' +
+      'CloudFront in front them. This has a number of benefits including being able to make use of AWS Shield\n' +
+      'you’ll want to add new rules that accounts might already have violated at some point in the past. For these\n' +
+      'reasons, you’ll want something to perform regular scanning of your environments.\n' +
+      'Now that you’re detecting various issues, you’ll want to document what those issues are so you’re not just\n' +
+      'telling your team they did something wrong without them knowing the rules you want them to play by. Many\n' +
+      'of the vendor and open-source solutions in this space detect things that you will not care about. For example,\n' +
+      'you might have accepted the risk of things like a bastion host that allows SSH access globally (although at\n' +
+      'some point you should try to switch that to use Systems Manager Session Manager). There are also things\n' +
+      'that out of the box these tools don’t detect that are specific to your environment that you want done. For\n' +
+      'example, you might want all public network resources to only be in a few specific accounts and subnets, or\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: 'To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.'
+  },
+  {
+    role: 'user',
+    content: '\n' +
+      'Question: Considering that our aim is "To understand the foundations of AWS and security in general, study this content to gain knowledge and skills.", generate 6 learning objectives (in a bullet list, one per line) for this training material.\n' +
+      'A learning objective need to describe a specific outcome and make clear what a "DevSecOps engineer" in the industry "IT" needs to know and/or do to achieve that outcome, in no more than 20 words, and it should start with a present tense verb.\n' +
+      'Examples of well written learning objectives are:\n' +
+      '  - Understand best practices for securing AWS environments and gain foundational knowledge of AWS security.\n' +
+      '  - Implement a common, secure baseline for new AWS accounts by following documented processes.\n' +
+      '\n' +
+      '=========\n' +
+      'Context: \x03On Twitter, follow @0xdabbad00 (my twitter account), @SummitRoute (my company), @jeffbarr (Chief\n' +
+      'evangelist for AWS), @AWSSecurityInfo (official AWS security twitter account), @StephenSchmidt\n' +
+      '(AWS CISO), @ben11kehoe (AWS hero), @esh (AWS hero), @jim_scharf (VP of AWS Identity),\n' +
+      '@QuinnyPig (aforementioned LastWeekInAWS author).\n' +
+      '\x03Read the weekly summary of general cloud news http://highscalability.com/, on twitter at @highscal.\n' +
+      '\x03Join the Slack "Cloud Security Forum". Ask myself or anyone else doing AWS security things for an\n' +
+      'invite.\n' +
+      'Learning the foundations\n' +
+      'This paper is mostly about current best practices, which requires you to know a lot of foundations of AWS\n' +
+      'and security in general.\n' +
+      'The best book for learning about security concepts you’ll likely use in your work around AWS is Securing\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'DevOps: Security in the Cloud by Julien Vehent, who manages Firefox Operations Security. For some\n' +
+      'hands-on training, flaws.cloud and flaws2.cloud will show you some important concepts.\n' +
+      'If you want to get a cert in order to give yourself a goal to work toward, and proof that you have some\n' +
+      'knowledge in the area, the only cert I recommend getting is the AWS Security Specialty\n' +
+      '11\n' +
+      'certification. To\n' +
+      '1\n' +
+      'https://summitroute.com\n' +
+      '2\n' +
+      'http://flaws.cloud\n' +
+      '3\n' +
+      'http://flaws2.cloud\n' +
+      '4\n' +
+      'https://github.com/duo-labs/cloudmapper\n' +
+      '5\n' +
+      'https://github.com/duo-labs/cloudtracker\n' +
+      '6\n' +
+      'https://github.com/duo-labs/cloudtrail-partitioner\n' +
+      '7\n' +
+      'https://github.com/duo-labs/parliament\n' +
+      '8\n' +
+      'https://lastweekinaws.com/\n' +
+      '9\n' +
+      'https://cloudseclist.com/\n' +
+      '10\n' +
+      'https://tldrsec.com/\n' +
+      '11\n' +
+      'https://aws.amazon.com/certification/certified-security-specialty/\n' +
+      'Page 2 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'prepare for the exam, you can take the acloud.guru\n' +
+      '12\n' +
+      'course and read the various white-papers from AWS\n' +
+      'along with the FAQs for security related AWS services. For companies, I also offer AWS security training.\n' +
+      'Mine is not geared toward the certification, but will help. There are other AWS offered certs which you may\n' +
+      'also wish to get in order to learn the foundations of AWS.\n' +
+      'Most common security incidents\n' +
+      'In order to discuss the steps to secure AWS environments, you should be aware of what the common security\n' +
+      'incidents on AWS are so you can plan your defensive strategies accordingly. Generically, the most common\n' +
+      'AWS related incidents are:\n' +
+      '1. Publicly accessible resources such as S3 buckets or ElasticSearch clusters.\n' +
+      '2. Leaked access keys. For example, access keys posted to GitHub.\n' +
+      '3.Compromised IAM Roles through SSRF or RCE against an EC2, resulting in access to the metadata\n' +
+      'service at 169.254.169.254.\n' +
+      'AWS Security Maturity RoadmapSummit Route\n' +
+      'If you’re lucky enough to not have any security incidents, you should practice what happens when systems or\n' +
+      'IAM roles are compromised. How long does it take you to identify, understand, and react? Use the lessons\n' +
+      'learned to improve.\n' +
+      'This practice may result in you taking some steps to improve your ability to analyze incidents, such as\n' +
+      'enforcing a role session name on role assumptions.\n' +
+      'Conclusion\n' +
+      'I work as an independent AWS security consultant.I provide training on AWS security. Reach out to me at\n' +
+      'scott@summitroute.com or read more at summitroute.com\n' +
+      'Page 10 of 10Copyright 2020, Summit Route. All rights reserved.\n' +
+      '=========\n' +
+      'Answer:'
+  },
+  {
+    role: 'assistant',
+    content: '- Identify common security incidents in AWS environments and develop defensive strategies to mitigate them.\n' +
+      '- Implement a secure baseline for new AWS accounts by following documented processes and best practices.\n' +
+      '- Demonstrate the ability to detect and respond to security incidents in a timely manner.\n' +
+      '- Enforce role session name on role assumptions to improve incident analysis capabilities.\n' +
+      '- Understand the foundations of AWS and security concepts relevant to DevSecOps engineering in the IT industry.\n' +
+      '- Apply Service Control Policies (SCPs) to restrict access, protect defenses, and reduce attack surface in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each learning objective listed, we want to generate from 2 to 4 statements.\n' +
+      "Those statements will be either true or false, and will be used to test the user's knowledge.\n" +
+      'To create a well-written statement, consider what a "DevSecOps engineer" in the industry "IT" need to think, say, do or know to be effective.\n' +
+      'To create the false statements, consider:\n' +
+      '  - what cognitive errors might a "DevSecOps engineer" in the industry "IT" make and why, or\n' +
+      '  - what might cause "DevSecOps engineer" to be resistant to avoiding this statement and why, or\n' +
+      '  - what may be hard to understand for a "DevSecOps engineer" and why.\n' +
+      'Each statement generated must:\n' +
+      '  - be relevant to the objective;\n' +
+      '  - be realistic;\n' +
+      '  - be derived from the ingested content;\n' +
+      '  - be distinct from each other (or not similar to each other);\n' +
+      '  - be no more than 25 words;\n' +
+      '  - describe an action and start with a present tense verb.\n' +
+      'Present the statements listed and grouped by the learning objective, and a [T] or [F] prepended to each, noting if they are true or false.\n'
+  },
+  {
+    role: 'assistant',
+    content: '[T] Service Control Policies (SCPs) are used to restrict access and reduce attack surface in AWS environments.\n' +
+      '[T] SCPs can be used to protect defenses, such as preventing the deletion of the IAM role for Security auditing.\n' +
+      '[F] SCPs are only applicable to S3 buckets and do not have any impact on access to other AWS services.\n' +
+      '[F] SCPs are only used for monitoring purposes and do not provide any security controls in AWS environments.'
+  },
+  {
+    role: 'user',
+    content: 'For each statement, generate a sentence explaining either why this is correct (for true statements) or a sentence explaining why it is incorrect, and what confusion a "DevSecOps engineer" in the industry "IT" might make if they think the statement is correct.\n'
+  },
+]
+
+Resposta:  {
+  role: 'assistant',
+  content: '[T] Service Control Policies (SCPs) are used to restrict access and reduce attack surface in AWS environments. This is correct because SCPs allow you to define fine-grained permissions and enforce security policies across multiple AWS accounts, helping to limit access and strengthen the overall security posture. A DevSecOps engineer should be familiar with SCPs to effectively control access and reduce the attack surface in AWS environments.\n' +
+    '\n' +
+    '[T] SCPs can be used to protect defenses, such as preventing the deletion of the IAM role for Security auditing. This is correct because SCPs can be applied to deny certain actions, such as deleting IAM roles, thereby protecting critical security defenses. A DevSecOps engineer should leverage SCPs to safeguard important security components and prevent accidental or malicious deletions.\n' +
+    '\n' +
+    '[F] SCPs are only applicable to S3 buckets and do not have any impact on access to other AWS services. This is incorrect. SCPs are not limited to S3 buckets and can be applied to various AWS services to control access and enforce security policies. A DevSecOps engineer should understand that SCPs can be used to manage permissions across multiple AWS services, not just S3 buckets.\n' +
+    '\n' +
+    '[F] SCPs are only used for monitoring purposes and do not provide any security controls in AWS environments. This is incorrect. SCPs are powerful security controls that allow you to define and enforce fine-grained permissions across AWS accounts. They help in reducing the attack surface and enforcing security policies. A DevSecOps engineer should recognize the importance of SCPs as a fundamental security control in AWS environments.'
+}
+---------------------
+
+Done in 37.29s.

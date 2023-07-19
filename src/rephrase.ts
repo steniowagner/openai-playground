@@ -23,7 +23,7 @@ export const rephrase = async (params: RephraseParams) => {
     params.vectorStore,
     params.prompt
   );
-  console.log(`Original-size: ${similarVectors.length} charcters`);
+  // console.log(`Original-size: ${similarVectors.length} charcters`);
   const questionPrompt = interpolatePrompt(REPHRASE_TEXT, {
     text: similarVectors,
   });
@@ -38,6 +38,6 @@ export const rephrase = async (params: RephraseParams) => {
     params.openAiApi,
     history
   )) as ChatCompletionResponseMessage;
-  console.log(`Rephrased-size: ${result.content?.length} charcters\n`);
+  // console.log(`Rephrased-size: ${result.content?.length} charcters\n`);
   return result.content!;
 };

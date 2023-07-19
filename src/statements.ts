@@ -7,7 +7,7 @@ import { askGpt } from "./ask-gpt";
 import { rephrase } from "./rephrase";
 
 type GenerateStatementsParams = GeneratorParams & {
-  learningObjectives: string;
+  learningObjectives: string[];
   aim: string;
 };
 
@@ -18,6 +18,16 @@ type MakePromptQuestionParams = {
   aim: string;
 };
 
+type Statement = {
+  description: string;
+  value: boolean;
+};
+
+export type StatementResult = {
+  learningObjective: string;
+  statements: Statement[];
+};
+
 const STATEMENTS_QUESTION_TEMPLATE_PROMPT = `
 Question: [question]
 =========
@@ -25,6 +35,16 @@ Learning objective: [learning_objective]
 =========
 Context: [context]
 =========
+Your answer must follow the following json structure:
+
+{
+  learningObjective: <the learning objective title>,
+  statements: [{
+    description: <description of the statement>,
+    value: <a boolean that indicates if the statement is either true or false>
+  }]
+}
+
 Answer:`;
 
 const makePromptQuestion = (params: MakePromptQuestionParams) => {
@@ -53,10 +73,16 @@ const makeContext = async (
   });
 };
 
-export const generate = async (params: GenerateStatementsParams) => {
-  const learningObjectives = params.learningObjectives.split("\n") as string[];
-  return Promise.all(
-    learningObjectives.map(async (learningObjective) => {
+const parseContentResult = (content?: string) => {
+  if (!content) {
+    return [];
+  }
+  return JSON.parse(content);
+};
+
+export const generate = async (params: GenerateStatementsParams) =>
+  Promise.all(
+    params.learningObjectives.map(async (learningObjective) => {
       const context = await makeContext(params, learningObjective);
       const promptQuestion = makePromptQuestion({
         learningObjective,
@@ -72,10 +98,6 @@ export const generate = async (params: GenerateStatementsParams) => {
         params.openAiApi,
         history
       )) as ChatCompletionResponseMessage;
-      return {
-        statements: (result.content as string).split("\n"),
-        learningObjective,
-      };
+      return parseContentResult(result.content) as StatementResult;
     })
   );
-};
